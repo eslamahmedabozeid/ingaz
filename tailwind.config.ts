@@ -24,8 +24,19 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          'custom-gradient': 'linear-gradient(to right, #062120, #062120)',
+          'custom-circle': 'linear-gradient(78deg, rgba(21, 207, 121, 0.36) 8.16%, rgba(30, 185, 220, 0.36) 91.33%)',
+
+      },
+    
+      blur: {
+        'custom-blur': '134px',
       },
       colors: {
+        'custom-green': '#062120',
+        'custom-transparent-dark': '#06212000',
+        'custom-dark': '#062120',
+        'white-40': 'rgba(255, 255, 255, 0.40)',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -61,6 +72,7 @@ const config: Config = {
         },
       },
       borderRadius: {
+        'large-circle': '479px',
         lg: `var(--radius)`,
         md: `calc(var(--radius) - 2px)`,
         sm: "calc(var(--radius) - 4px)",
