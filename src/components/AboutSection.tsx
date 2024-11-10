@@ -171,47 +171,67 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-      {/* accordion */}
+      {/* Accordion */}
       <div className="pt-[200px] bg-custom-gradient">
-        <div className="container-fluid mx-auto mt-10 px-4">
-        <img src="/images/Vector.png" />
-        <div className='container mx-auto mt-10 px-4'>
-          <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2">
-            <div>
-              <h1 className="text-[#fff] font-bold text-[24px]">
-                التكنولوجيا والابتكار في مركز إنجاز المتحدة للتدريب
-              </h1>
-              <p className="text-[12px] font-normal text-white-40 w-[75%] mt-4">
-                في مركز إنجاز المتحدة للتدريب، نعتبر التكنولوجيا والابتكار
-                مفتاحاً لتحسين تجربة التعلم وتقديم حلول تدريبية متطورة. نحن
-                ملتزمون بتوظيف أحدث التقنيات لرفع مستوى التدريب وتحقيق نتائج
-                ملموسة. إليك كيف نستخدم التكنولوجيا والابتكار في تقديم خدماتنا
-              </p>
-              <div className="w-full h-[39px] shrink-0 relative z-[9] mt-[22px]">
-                <div className="flex w-full h-[39px] gap-[8px] items-center flex-nowrap top-0 left-0 z-10">
-                  <a
-                    href="#"
-                    className="flex w-[186.639px] h-[39px] pt-[8px] pr-[50px] pb-[8px] pl-[50px] gap-[8px] justify-center items-center shrink-0 flex-nowrap rounded-[45px] border-solid border border-[#15b86c] relative z-[14] pointer"
-                  >
-                    <span className="flex w-[52px] h-[22px] justify-center items-start shrink-0 basis-auto   text-[12px] font-normal leading-[21.84px] text-[#15b86c] relative text-center whitespace-nowrap z-[15]">
-                      إقرأ المزيد
-                    </span>
-                  </a>
-                  <div className="w-[39px] h-[39px] shrink-0 rounded-[99px] relative z-[11]">
-                    <div className="flex w-[39px] h-[39px] pt-[3px] pr-px pb-[3px] pl-px flex-col gap-[8px] items-start flex-nowrap bg-[#15b86c] rounded-[99px] absolute top-0 left-0 z-[12]">
-                      <div className="w-[35.575px] h-[32.785px] shrink-0 bg-[url(/images/82b499fe-f219-489a-9c2a-3a311eb7a5eb.png)] bg-cover bg-no-repeat relative z-[13]" />
-                    </div>
-                  </div>
-                </div>
+      <div className="container-fluid mx-auto mt-10 px-4 relative">
+      
+      {/* Background Vector Image */}
+      <img src="/images/Vector.png" alt="Background Vector" className="absolute top-[-158px] right-0 w-[54%]" />
+
+      <div className="container mx-auto mt-10 px-4">
+        
+        {/* Grid Layout for Accordion and Content */}
+        <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-8">
+          
+        
+
+          {/* Right Section: Image, Text, and Buttons */}
+          <div className="flex flex-col space-y-6">
+            
+            {/* Image */}
+            <div className="h-[337px]">
+              {/* <img src="/images/Vector.png" alt="Main Image" className="object-cover w-full h-full rounded-lg" /> */}
+            </div>
+            
+            {/* Title and Description */}
+            <h1 className="text-[#fff] font-bold text-[24px]">
+              التكنولوجيا والابتكار في مركز إنجاز المتحدة للتدريب
+            </h1>
+            <p className="text-[12px] font-normal text-white opacity-70 w-[80%] mt-4">
+              في مركز إنجاز المتحدة للتدريب، نعتبر التكنولوجيا والابتكار مفتاحاً لتحسين تجربة التعلم وتقديم حلول تدريبية متطورة.
+              نحن ملتزمون بتوظيف أحدث التقنيات لرفع مستوى التدريب وتحقيق نتائج ملموسة. إليك كيف نستخدم التكنولوجيا والابتكار
+              في تقديم خدماتنا.
+            </p>
+
+            {/* Buttons Section */}
+            <div className="flex items-center mt-6">
+              <a
+                href="#"
+                className="flex items-center justify-center w-[186px] h-[39px] rounded-full border border-[#15b86c] text-[#15b86c] text-[12px] font-normal"
+              >
+                إقرأ المزيد
+              </a>
+              <div className="flex items-center justify-center w-[39px] h-[39px] bg-[#15b86c] rounded-full mx-4">
+                <div
+                  className="w-[35px] h-[33px] bg-cover bg-no-repeat"
+                  style={{
+                    backgroundImage: 'url(/images/82b499fe-f219-489a-9c2a-3a311eb7a5eb.png)',
+                  }}
+                />
               </div>
             </div>
-            {/* accordion Button */}
-            <div className="accordion">
-              <AccordionComponent />
-            </div>
           </div>
+        
+          {/* Left Section: Accordion */}
+          <div className="accordion">
+            <AccordionComponent />
           </div>
         </div>
+      </div>
+    </div>
+
+
+        
         <div className="absolute lg:left-[-326px] z-0">
         <div className="w-[500px] h-[500px] rounded-large-circle bg-custom-circle blur-custom-blur"></div>
       </div>
