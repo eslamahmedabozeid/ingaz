@@ -1,5 +1,9 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
-
+import CountUp from "react-countup";
+import CountComponent from "./CountComponent";
+import AccordionComponent from "./AccordionComponent";
 const logos = [
   { src: "/images/logo1.png", alt: "Logo 1" },
   { src: "/images/logo2.png", alt: "Logo 2" },
@@ -150,7 +154,70 @@ const AboutSection = () => {
         <div className="w-[500px] h-[500px] rounded-large-circle bg-custom-circle blur-custom-blur"></div>
       </div>
       <div className="pt-[200px] bg-custom-gradient">
+        <div className="container mx-auto mt-10 px-4">
+          <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2">
+            <h1 className="text-[48px] font-bold tracking-[0.96px] text-[#FFF]">
+              إنــجاز فــي أرقــام
+            </h1>
+            <p className="text-[14px] font-normal text-white-40 w-[75%]">
+              في مركز إنجاز المتحدة للتدريب، نركز على تقديم حلول تدريبية مبتكرة
+              تعزز المهارات الشخصية، وتنمي المواهب من خلال برامج شاملة. نضمن
+              جودة التدريب عبر استشارات مهنية واستراتيجية تدعم النمو المؤسسي.
+              نلتزم بالتميز{" "}
+            </p>
+          </div>
+          <div className="grid grid-cols-2  gap-8  bg-[url(/images/GroupCount.png)] bg-auto bg-no-repeat mt-[61px]">
+            <CountComponent />
+          </div>
+        </div>
+      </div>
+      {/* accordion */}
+      <div className="pt-[200px] bg-custom-gradient">
+        <div className="container-fluid mx-auto mt-10 px-4">
+        <img src="/images/Vector.png" />
+        <div className='container mx-auto mt-10 px-4'>
+          <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2">
+            <div>
+              <h1 className="text-[#fff] font-bold text-[24px]">
+                التكنولوجيا والابتكار في مركز إنجاز المتحدة للتدريب
+              </h1>
+              <p className="text-[12px] font-normal text-white-40 w-[75%] mt-4">
+                في مركز إنجاز المتحدة للتدريب، نعتبر التكنولوجيا والابتكار
+                مفتاحاً لتحسين تجربة التعلم وتقديم حلول تدريبية متطورة. نحن
+                ملتزمون بتوظيف أحدث التقنيات لرفع مستوى التدريب وتحقيق نتائج
+                ملموسة. إليك كيف نستخدم التكنولوجيا والابتكار في تقديم خدماتنا
+              </p>
+              <div className="w-full h-[39px] shrink-0 relative z-[9] mt-[22px]">
+                <div className="flex w-full h-[39px] gap-[8px] items-center flex-nowrap top-0 left-0 z-10">
+                  <a
+                    href="#"
+                    className="flex w-[186.639px] h-[39px] pt-[8px] pr-[50px] pb-[8px] pl-[50px] gap-[8px] justify-center items-center shrink-0 flex-nowrap rounded-[45px] border-solid border border-[#15b86c] relative z-[14] pointer"
+                  >
+                    <span className="flex w-[52px] h-[22px] justify-center items-start shrink-0 basis-auto   text-[12px] font-normal leading-[21.84px] text-[#15b86c] relative text-center whitespace-nowrap z-[15]">
+                      إقرأ المزيد
+                    </span>
+                  </a>
+                  <div className="w-[39px] h-[39px] shrink-0 rounded-[99px] relative z-[11]">
+                    <div className="flex w-[39px] h-[39px] pt-[3px] pr-px pb-[3px] pl-px flex-col gap-[8px] items-start flex-nowrap bg-[#15b86c] rounded-[99px] absolute top-0 left-0 z-[12]">
+                      <div className="w-[35.575px] h-[32.785px] shrink-0 bg-[url(/images/82b499fe-f219-489a-9c2a-3a311eb7a5eb.png)] bg-cover bg-no-repeat relative z-[13]" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* accordion Button */}
+            <div className="accordion">
+              <AccordionComponent />
+            </div>
+          </div>
+          </div>
+        </div>
+        <div className="absolute lg:left-[-326px] z-0">
+        <div className="w-[500px] h-[500px] rounded-large-circle bg-custom-circle blur-custom-blur"></div>
+      </div>
+      </div>
 
+      <div className="pt-[200px] bg-custom-gradient">
 
       </div>
     </div>

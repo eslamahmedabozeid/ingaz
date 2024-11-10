@@ -89,6 +89,15 @@ html {
     .small_width {
         @apply w-[auto]
     }
+    .borderground {
+        @apply border-2 border-[#243c5a] border-opacity-50
+    }
+    .borderground:hover {
+        @apply bg-[#093735]
+    }
+    .box-width {
+        @apply w-[91%];
+    }
 }
 
 @layer utilities {
