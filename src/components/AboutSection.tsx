@@ -1,13 +1,17 @@
 import React from "react";
 
-
 const logos = [
-    { src: '/images/logo1.png', alt: 'Logo 1' },
-    { src: '/images/logo2.png', alt: 'Logo 2' },
-    { src: '/images/logo3.png', alt: 'Logo 3' },
-    { src: '/images/logo4.png', alt: 'Logo 4' },
-    { src: '/images/logo5.png', alt: 'Logo 5' },
-  ];
+  { src: "/images/logo1.png", alt: "Logo 1" },
+  { src: "/images/logo2.png", alt: "Logo 2" },
+  { src: "/images/logo3.png", alt: "Logo 3" },
+  { src: "/images/logo4.png", alt: "Logo 4" },
+  { src: "/images/logo5.png", alt: "Logo 5" },
+  { src: "/images/logo6.png", alt: "Logo 6" },
+  { src: "/images/logo7.png", alt: "Logo 7" },
+  { src: "/images/logo8.png", alt: "Logo 8" },
+  { src: "/images/logo9.png", alt: "Logo 9" },
+  { src: "/images/logo10.png", alt: "Logo 10" }
+];
 const AboutSection = () => {
   return (
     <div>
@@ -26,15 +30,15 @@ const AboutSection = () => {
             <div className="flex w-full h-[188px] flex-col gap-[22px] items-end flex-nowrap top-0 left-0 z-[3]">
               <div className="flex flex-col gap-[8px] items-start self-stretch shrink-0 flex-nowrap relative z-[4]">
                 <div className="flex w-[1016px] flex-col items-end shrink-0 flex-nowrap relative z-[5]">
-                  <span className="h-[46px] self-stretch shrink-0 basis-auto   text-[25px] font-bold leading-[45.5px] text-[#fff] tracking-[0.5px] relative text-right whitespace-nowrap z-[6]">
+                  <span className="h-[46px] self-stretch shrink-0 basis-auto   text-[25px] font-bold leading-[45.5px] text-[#fff] tracking-[0.5px] relative  whitespace-nowrap z-[6]">
                     تعرف علينا
                   </span>
-                  <span className="h-[29px] self-stretch shrink-0 basis-auto   text-[16px] font-medium leading-[29px] text-[#15b86c] tracking-[0.32px] relative text-right whitespace-nowrap z-[7]">
+                  <span className="h-[29px] self-stretch shrink-0 basis-auto   text-[16px] font-medium leading-[29px] text-[#15b86c] tracking-[0.32px] relative  whitespace-nowrap z-[7]">
                     إنجاز المتحدة للتدريب الرائدة في التدريب المؤسسي
                     والتكنولوجيا التعليمية في منطقة الشرق الأوسط
                   </span>
                 </div>
-                <span className="flex w-full h-[44px] justify-end items-start shrink-0   text-[12px] font-normal leading-[21.84px] text-[#fff] tracking-[0.24px] relative text-right z-[8]">
+                <span className="flex w-full h-[44px] justify-end items-start shrink-0   text-[12px] font-normal leading-[21.84px] text-[#fff] tracking-[0.24px] relative  z-[8]">
                   حيث نقدم أكثر الحلول شمولية في تطوير التعلم والتدريب في جميع
                   الوظائف المؤسسية الاستراتيجية، بما في ذلك، الموارد البشرية،
                   الموارد الرقمية والدورات المهنية والمتخصصة في جميع المجالات.
@@ -111,28 +115,43 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-        <div className="absolute lg:right-[-326px] z-0">
-        <div className="w-[500px] h-[500px] rounded-large-circle bg-custom-circle blur-custom-blur">
-        </div>
-        </div>
+      <div className="absolute lg:right-[-326px] z-0">
+        <div className="w-[500px] h-[500px] rounded-large-circle bg-custom-circle blur-custom-blur"></div>
+      </div>
       {/* Professional Accreditations */}
       <div className="pt-[200px] bg-custom-gradient">
         <div className="container  mx-auto mt-10 px-4">
-            <h1 className='text-[25px] font-bold text-[#fff]'>الإعتمادات المهنية</h1>
-            <p className='font-normal text-[12px] text-white-40'>شركاؤنا في الاعتماد المهني</p>
+          <h1 className="text-[25px] font-bold text-[#fff]">
+            الإعتمادات المهنية
+          </h1>
+          <p className="font-normal text-[12px] text-white-40">
+            شركاؤنا في الاعتماد المهني
+          </p>
         </div>
         <div className="container mx-auto mt-10 px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 p-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 p-8">
             {logos.map((logo, index) => (
-                <div
+              <div
                 key={index}
                 className="flex items-center justify-center transition-transform transform hover:scale-105 "
-                >
-                <img src={logo.src} alt={logo.alt} className="max-w-full max-h-full" />
-                </div>
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="max-w-full max-h-full"
+                />
+              </div>
             ))}
-            </div>
+          </div>
         </div>
+      </div>
+      {/* Achievement in numbers */}
+      <div className="absolute lg:left-[-326px] z-0">
+        <div className="w-[500px] h-[500px] rounded-large-circle bg-custom-circle blur-custom-blur"></div>
+      </div>
+      <div className="pt-[200px] bg-custom-gradient">
+
+
       </div>
     </div>
   );
