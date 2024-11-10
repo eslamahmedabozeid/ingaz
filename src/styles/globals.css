@@ -98,6 +98,9 @@ html {
     .box-width {
         @apply w-[91%];
     }
+    .lg_absoulte {
+        @apply w-[500px] h-[500px]
+    }
 }
 
 @layer utilities {

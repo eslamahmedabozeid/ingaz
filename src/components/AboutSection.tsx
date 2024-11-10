@@ -33,16 +33,16 @@ const AboutSection = () => {
           <div className="pt-[16px] md:pt-[57px]">
             <div className="flex w-full h-[188px] flex-col gap-[22px] items-end flex-nowrap top-0 left-0 z-[3]">
               <div className="flex flex-col gap-[8px] items-start self-stretch shrink-0 flex-nowrap relative z-[4]">
-                <div className="flex w-[1016px] flex-col items-end shrink-0 flex-nowrap relative z-[5]">
-                  <span className="h-[46px] self-stretch shrink-0 basis-auto   text-[25px] font-bold leading-[45.5px] text-[#fff] tracking-[0.5px] relative  whitespace-nowrap z-[6]">
+                <div className="flex sm:w-full lg:w-[1016px] flex-col items-end shrink-0 flex-nowrap relative z-[5]">
+                  <span className="self-stretch shrink-0 basis-auto   text-[25px] font-bold leading-[45.5px] text-[#fff] tracking-[0.5px] relative  lg:whitespace-nowrap z-[6]">
                     تعرف علينا
                   </span>
-                  <span className="h-[29px] self-stretch shrink-0 basis-auto   text-[16px] font-medium leading-[29px] text-[#15b86c] tracking-[0.32px] relative  whitespace-nowrap z-[7]">
+                  <span className="self-stretch shrink-0 basis-auto   text-[16px] font-medium leading-[29px] text-[#15b86c] tracking-[0.32px] relative  lg:whitespace-nowrap z-[7]">
                     إنجاز المتحدة للتدريب الرائدة في التدريب المؤسسي
                     والتكنولوجيا التعليمية في منطقة الشرق الأوسط
                   </span>
                 </div>
-                <span className="flex w-full h-[44px] justify-end items-start shrink-0   text-[12px] font-normal leading-[21.84px] text-[#fff] tracking-[0.24px] relative  z-[8]">
+                <span className="flex w-full justify-end items-start shrink-0   text-[12px] font-normal leading-[21.84px] text-[#fff] tracking-[0.24px] relative  z-[8]">
                   حيث نقدم أكثر الحلول شمولية في تطوير التعلم والتدريب في جميع
                   الوظائف المؤسسية الاستراتيجية، بما في ذلك، الموارد البشرية،
                   الموارد الرقمية والدورات المهنية والمتخصصة في جميع المجالات.
@@ -120,7 +120,7 @@ const AboutSection = () => {
         </div>
       </div>
       <div className="absolute lg:right-[-326px] z-0">
-        <div className="w-[500px] h-[500px] rounded-large-circle bg-custom-circle blur-custom-blur"></div>
+        <div className="lg:lg_absoulte rounded-large-circle bg-custom-circle blur-custom-blur"></div>
       </div>
       {/* Professional Accreditations */}
       <div className="pt-[200px] bg-custom-gradient">
@@ -151,7 +151,7 @@ const AboutSection = () => {
       </div>
       {/* Achievement in numbers */}
       <div className="absolute lg:left-[-326px] z-0">
-        <div className="w-[500px] h-[500px] rounded-large-circle bg-custom-circle blur-custom-blur"></div>
+        <div className="lg:lg_absoulte rounded-large-circle bg-custom-circle blur-custom-blur"></div>
       </div>
       <div className="pt-[200px] bg-custom-gradient">
         <div className="container mx-auto mt-10 px-4">
@@ -166,79 +166,180 @@ const AboutSection = () => {
               نلتزم بالتميز{" "}
             </p>
           </div>
-          <div className="grid grid-cols-2  gap-8  bg-[url(/images/GroupCount.png)] bg-auto bg-no-repeat mt-[61px]">
+          <div className="grid grid-cols-2 gap-8 bg-[url(/images/GroupCount.png)] bg-auto bg-no-repeat rtl:bg-[5%] ltr:bg-right pt-[61px] mt-[61px]">
             <CountComponent />
           </div>
         </div>
       </div>
       {/* Accordion */}
       <div className="pt-[200px] bg-custom-gradient">
-      <div className="container-fluid mx-auto mt-10 px-4 relative">
-      
-      {/* Background Vector Image */}
-      <img src="/images/Vector.png" alt="Background Vector" className="absolute top-[-158px] right-0 w-[54%]" />
+        <div className="container-fluid mx-auto mt-10 px-4 relative">
+          {/* Background Vector Image */}
+          <img
+            src="/images/Vector.png"
+            alt="Background Vector"
+            className="absolute top-[-158px] right-0 w-[54%] rtl:right-0 ltr:left-0"
+          />
 
-      <div className="container mx-auto mt-10 px-4">
-        
-        {/* Grid Layout for Accordion and Content */}
-        <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-8">
-          
-        
+          <div className="container mx-auto mt-10 px-4">
+            {/* Grid Layout for Accordion and Content */}
+            <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Right Section: Image, Text, and Buttons */}
+              <div className="flex flex-col space-y-6">
+                {/* Image */}
+                <div className="h-[337px]">
+                  {/* <img src="/images/Vector.png" alt="Main Image" className="object-cover w-full h-full rounded-lg" /> */}
+                </div>
 
-          {/* Right Section: Image, Text, and Buttons */}
-          <div className="flex flex-col space-y-6">
-            
-            {/* Image */}
-            <div className="h-[337px]">
-              {/* <img src="/images/Vector.png" alt="Main Image" className="object-cover w-full h-full rounded-lg" /> */}
-            </div>
-            
-            {/* Title and Description */}
-            <h1 className="text-[#fff] font-bold text-[24px]">
-              التكنولوجيا والابتكار في مركز إنجاز المتحدة للتدريب
-            </h1>
-            <p className="text-[12px] font-normal text-white opacity-70 w-[80%] mt-4">
-              في مركز إنجاز المتحدة للتدريب، نعتبر التكنولوجيا والابتكار مفتاحاً لتحسين تجربة التعلم وتقديم حلول تدريبية متطورة.
-              نحن ملتزمون بتوظيف أحدث التقنيات لرفع مستوى التدريب وتحقيق نتائج ملموسة. إليك كيف نستخدم التكنولوجيا والابتكار
-              في تقديم خدماتنا.
-            </p>
+                {/* Title and Description */}
+                <h1 className="text-[#fff] font-bold text-[24px]">
+                  التكنولوجيا والابتكار في مركز إنجاز المتحدة للتدريب
+                </h1>
+                <p className="text-[12px] font-normal text-white opacity-70 w-[80%] mt-4">
+                  في مركز إنجاز المتحدة للتدريب، نعتبر التكنولوجيا والابتكار
+                  مفتاحاً لتحسين تجربة التعلم وتقديم حلول تدريبية متطورة. نحن
+                  ملتزمون بتوظيف أحدث التقنيات لرفع مستوى التدريب وتحقيق نتائج
+                  ملموسة. إليك كيف نستخدم التكنولوجيا والابتكار في تقديم
+                  خدماتنا.
+                </p>
 
-            {/* Buttons Section */}
-            <div className="flex items-center mt-6">
-              <a
-                href="#"
-                className="flex items-center justify-center w-[186px] h-[39px] rounded-full border border-[#15b86c] text-[#15b86c] text-[12px] font-normal"
-              >
-                إقرأ المزيد
-              </a>
-              <div className="flex items-center justify-center w-[39px] h-[39px] bg-[#15b86c] rounded-full mx-4">
-                <div
-                  className="w-[35px] h-[33px] bg-cover bg-no-repeat"
-                  style={{
-                    backgroundImage: 'url(/images/82b499fe-f219-489a-9c2a-3a311eb7a5eb.png)',
-                  }}
-                />
+                {/* Buttons Section */}
+                <div className="flex items-center mt-6">
+                  <a
+                    href="#"
+                    className="flex items-center justify-center w-[186px] h-[39px] rounded-full border border-[#15b86c] text-[#15b86c] text-[12px] font-normal"
+                  >
+                    إقرأ المزيد
+                  </a>
+                  <div className="flex items-center justify-center w-[39px] h-[39px] bg-[#15b86c] rounded-full mx-4">
+                    <div
+                      className="w-[35px] h-[33px] bg-cover bg-no-repeat"
+                      style={{
+                        backgroundImage:
+                          "url(/images/82b499fe-f219-489a-9c2a-3a311eb7a5eb.png)"
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Left Section: Accordion */}
+              <div className="accordion">
+                <AccordionComponent />
               </div>
             </div>
           </div>
-        
-          {/* Left Section: Accordion */}
-          <div className="accordion">
-            <AccordionComponent />
+        </div>
+
+        <div className="absolute lg:left-[-326px] z-0">
+          <div className="lg:lg_absoulte rounded-large-circle bg-custom-circle blur-custom-blur"></div>
+        </div>
+      </div>
+      {/* Service */}
+      <div className="pt-[200px] bg-custom-gradient">
+        <div className="container  mx-auto mt-10 px-4 relative">
+          <div className="">
+            <h1 className="text-[32px] font-bold text-[#fff]">خدماتنا </h1>
+            <img
+              src="/images/Vector@2x.png"
+              alt="Background Vector"
+              className="absolute top-[-249px] rtl:top-[-197px] rtl:right-[119px] ltr:right-[-114px] w-full"
+            />
+          </div>
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 sm:grid-cols-1 w-[35%] mt-[19px]">
+              <p className="font-normal text-[12px] text-white-40">
+                نقدم أكثر من 16 خدمة متكاملة لتطوير الأفراد والمؤسسات، تشمل
+                التدريب المتخصص، التحليل الدقيق للاحتياجات، والتعلم الإلكتروني،
+                وغيرها من الحلول المصممة لدعم النجاح المؤسسي.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-center mt-[140px]">
+            <div className="p-[32px] borderground rounded-lg mx-4 hover:bg-[#093735] box-width lg:min-h-[378px]">
+              <h4 className="text-[16px] text-[#fff] font-semibold">
+                تحليل الاحتياجات التدريبية
+              </h4>
+              <p className="text-[14px] text-[#fff] font-light mt-[32px]">
+                نقوم بتحليل دقيق للفجوات في المهارات والمعرفة لضمان تقديم حلول
+                تدريبية مخصصة تحقق أهدافك بفاعلية
+              </p>
+              <div className="mt-[89px]">
+                <img src="/images/Group17.svg" />
+              </div>
+            </div>
+            <div className="p-[32px] borderground rounded-lg mx-4 hover:bg-[#093735] box-width lg:min-h-[378px]">
+              <h4 className="text-[16px] text-[#fff] font-semibold">
+                تصميم وتنفيذ برامج مخصصة
+              </h4>
+              <p className="text-[14px] text-[#fff] font-light mt-[32px]">
+                نصمم برامج تدريبية شاملة ومتكاملة تتوافق مع احتياجاتك
+                الاستراتيجية وتعزز من كفاءتك العملية
+              </p>
+              <div className="mt-[89px]">
+                <img src="/images/Group18.svg" />
+              </div>
+            </div>
+            <div className="p-[32px] borderground rounded-lg mx-4 hover:bg-[#093735] box-width lg:min-h-[378px]">
+              <h4 className="text-[16px] text-[#fff] font-semibold">
+                التعلم الإلكتروني
+              </h4>
+              <p className="text-[14px] text-[#fff] font-light mt-[32px]">
+                نمنحك فرصة التعلم في أي وقت ومن أي مكان عبر حلول تعليمية مرنة
+                تتناسب مع جدولك
+              </p>
+              <div className="mt-[89px]">
+                <img src="/images/Group19.svg" />
+              </div>
+            </div>
+            <div className="p-[32px] borderground rounded-lg mx-4 hover:bg-[#093735] box-width lg:min-h-[378px]">
+              <h4 className="text-[16px] text-[#fff] font-semibold">
+                استشارات تحسين الأداء
+              </h4>
+              <p className="text-[14px] text-[#fff] font-light mt-[32px]">
+                نقدم استراتيجيات متقدمة لتحسين الأداء الفردي والمؤسسي، مما يضمن
+                تحقيق أهدافك بكفاءة أعلى
+              </p>
+              <div className="mt-[89px]">
+                <img src="/images/Group20.svg" />
+              </div>
+            </div>
+          </div>
+          <div className="absolute lg:left-[33%] z-0">
+            <div className="lg:lg_absoulte rounded-large-circle bg-custom-circle blur-custom-blur"></div>
+          </div>
+          {/* Buttons Section */}
+          <div className="flex items-center mt-[111px]">
+            <a
+              href="#"
+              className="flex items-center justify-center w-[186px] h-[39px] rounded-full border border-[#15b86c] text-[#15b86c] text-[12px] font-normal"
+            >
+              عرض جميع الخدمات
+            </a>
+            <div className="flex items-center justify-center w-[39px] h-[39px] bg-[#15b86c] rounded-full mx-4">
+              <div
+                className="w-[35px] h-[33px] bg-cover bg-no-repeat"
+                style={{
+                  backgroundImage:
+                    "url(/images/82b499fe-f219-489a-9c2a-3a311eb7a5eb.png)"
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-
-        
-        <div className="absolute lg:left-[-326px] z-0">
-        <div className="w-[500px] h-[500px] rounded-large-circle bg-custom-circle blur-custom-blur"></div>
-      </div>
-      </div>
 
       <div className="pt-[200px] bg-custom-gradient">
-
+        <div className="container  mx-auto mt-10 px-4 relative">
+        <div className="container  mx-auto mt-10 px-4">
+          <h1 className="text-[25px] font-bold text-[#fff]">
+          مفهوم إنجاز         
+          </h1>
+          <p className="font-normal text-[12px] text-white-40 w-[51%] mt-[19px]">
+          في مركز إنجاز المتحدة للتدريب، نركز على تقديم حلول تدريبية مبتكرة تعزز المهارات الشخصية، وتنمي المواهب من خلال برامج شاملة. نضمن جودة التدريب عبر استشارات مهنية واستراتيجية تدعم النمو المؤسسي. نلتزم بالتميز من خلال شراكات عالمية، ونطور منهجيات تدريبية مبتكرة تتماشى مع احتياجات السوق المتغيرة لتحقيق أفضل النتائج.
+          </p>
+        </div>
+        </div>
       </div>
     </div>
   );

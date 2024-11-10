@@ -7,7 +7,7 @@ type FristSectionProps = {
   
 const FristSection = ({ t }: FristSectionProps) => {
   return (
-    <div className="main-container h-[1037px] relative mx-auto my-0">
+    <div className="main-container h-[1037px] relative mx-auto my-0 overflow-hidden">
     <div className="max-sm:small_width w-[600.966px] h-[600.966px] bg-[url(/images/ac37745d-e459-4a81-8c23-a5fc334008ee.png)] bg-cover bg-no-repeat rounded-[50%] absolute top-[-238px] left-[1431px] z-[5]" />
     <div className="max-sm:small_width w-[425px] h-[425px] bg-[url(/images/0120d748-23da-4186-8e7d-0f4164a8fe35.png)] bg-cover bg-no-repeat rounded-[50%] absolute top-[-174px] left-[-279px] z-[4]" />
     <div className="max-sm:small_width w-[1100.95px] h-[1040.681px] bg-[url(/images/5f85de9e-ecd0-4605-93f5-82fce750037d.png)] bg-cover bg-no-repeat absolute top-[-114.999px] left-[-519.001px] z-[3]" />

@@ -14,7 +14,7 @@ function page({ params: { locale } }: { params: { locale: string } }) {
         {/* <ThemeChanger /> */}
       </div>
       <ServerComponent locale={locale} />
-      <ClientComponent />
+      {/* <ClientComponent /> */}
     </div>
   );
 }
