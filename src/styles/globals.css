@@ -101,6 +101,15 @@ html {
     .lg_absoulte {
         @apply w-[500px] h-[500px]
     }
+    .X_font {
+        @apply text-[14px] mt-[53px] font-normal text-[rgba(255,255,255,0.3)]
+    }
+    .number_font{
+        @apply text-[#fff] text-[40px] font-semibold rounded-[99px] bg-[rgba(9,55,53,0.2)] w-[64px] h-[66px] flex justify-center
+    }
+    .title_font{
+        @apply text-[#fff] text-[14px] font-semibold px-4
+    }
 }
 
 @layer utilities {

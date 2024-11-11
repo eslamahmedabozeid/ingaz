@@ -328,17 +328,97 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-
+      {/* Achievement concept */}
       <div className="pt-[200px] bg-custom-gradient">
         <div className="container  mx-auto mt-10 px-4 relative">
-        <div className="container  mx-auto mt-10 px-4">
-          <h1 className="text-[25px] font-bold text-[#fff]">
-          مفهوم إنجاز         
-          </h1>
+          <h1 className="text-[25px] font-bold text-[#fff]">مفهوم إنجاز</h1>
           <p className="font-normal text-[12px] text-white-40 w-[51%] mt-[19px]">
-          في مركز إنجاز المتحدة للتدريب، نركز على تقديم حلول تدريبية مبتكرة تعزز المهارات الشخصية، وتنمي المواهب من خلال برامج شاملة. نضمن جودة التدريب عبر استشارات مهنية واستراتيجية تدعم النمو المؤسسي. نلتزم بالتميز من خلال شراكات عالمية، ونطور منهجيات تدريبية مبتكرة تتماشى مع احتياجات السوق المتغيرة لتحقيق أفضل النتائج.
+            في مركز إنجاز المتحدة للتدريب، نركز على تقديم حلول تدريبية مبتكرة
+            تعزز المهارات الشخصية، وتنمي المواهب من خلال برامج شاملة. نضمن جودة
+            التدريب عبر استشارات مهنية واستراتيجية تدعم النمو المؤسسي. نلتزم
+            بالتميز من خلال شراكات عالمية، ونطور منهجيات تدريبية مبتكرة تتماشى
+            مع احتياجات السوق المتغيرة لتحقيق أفضل النتائج.
           </p>
+
+          <div className="grid grid-cols-5 sm:grid-cols-2 lg:grid-cols-5 mt-[80px]">
+            <div className="">
+              <div className="flex items-center">
+                <h2 className="number_font">إ</h2>
+                <h2 className="title_font">إبداع الحلول التدريبية</h2>
+              </div>
+              <div className="p-[19px]">
+                <p className=" X_font ">
+                  نقدم حلولًا تدريبية مبتكرة لتعزيز المهارات الشخصية باستخدام
+                  منهجيات عالمية.
+                </p>
+              </div>
+            </div>
+            <div className="">
+              <div className="flex items-center">
+                <h2 className="number_font">ن</h2>
+                <h2 className="title_font">نماء المواهب</h2>
+              </div>
+              <div className="p-[19px]">
+                <p className=" X_font ">
+                  ملتزمون بتطوير المواهب عبر برامج تدريبية شاملة تعزز المهارات
+                  وتفتح آفاقًا جديدة.
+                </p>
+              </div>
+            </div>
+            <div className="">
+              <div className="flex items-center">
+                <h2 className="number_font">ج</h2>
+                <h2 className="title_font">جودتنا في التدريب</h2>
+              </div>
+              <div className="p-[19px]">
+                <p className=" X_font ">
+                  نقدم استشارات مهنية واستراتيجية تساهم في النمو المؤسسي.
+                </p>
+              </div>
+            </div>
+            <div className="">
+              <div className="flex items-center">
+                <h2 className="number_font">ا</h2>
+                <h2 className="title_font">التزامنا بالتميز</h2>
+              </div>
+              <div className="p-[19px]">
+                <p className=" X_font ">
+                  {" "}
+                  نقدم خدمات رائدة ونعمل بالتعاون مع القطاعات المهنية والشركات
+                  العالمية.
+                </p>
+              </div>
+            </div>
+            <div className="">
+              <div className="flex items-center">
+                <h2 className="number_font">ز</h2>
+                <h2 className="title_font">زوايا الابتكار</h2>
+              </div>
+              <div className="p-[19px]">
+                <p className=" X_font ">
+                  نطور منهجيات تدريبية جديدة تتوافق مع احتياجات السوق المتغيرة.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div className="absolute lg:left-[-326px] z-0">
+          <div className="lg:lg_absoulte rounded-large-circle bg-custom-circle blur-custom-blur"></div>
+        </div>
+      <div className="pt-[200px] bg-custom-gradient">
+        <div className="container  mx-auto mt-10 px-4 relative">
+          <div className="flex items-baseline">
+            <div className="">
+            <h1 className="text-[25px] font-bold text-[#fff]">قالوا عنا</h1>
+            <h3 className="text-[17px] font-bold text-[#15B86C]">اكتشف تجارب عملائنا المتميزة</h3>
+            </div>
+              <img src='/images/Rectangle357.svg' />
+            <div className="w-[70%]">
+              <p className='text-[14px] font-normal text-[rgba(255,255,255,0.3)]  w-[4]'>نحن في مركز إنجاز المتحدة للتدريب نفخر بتقديم تجارب تعليمية لا تُنسى. إليك ما قاله بعض عملائنا</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
