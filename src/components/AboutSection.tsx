@@ -4,6 +4,9 @@ import React from "react";
 import CountUp from "react-countup";
 import CountComponent from "./CountComponent";
 import AccordionComponent from "./AccordionComponent";
+import Testimonials from "./Testimonials";
+import Trainingfields from "./Trainingfields";
+import Mapping from "./Mapping";
 const logos = [
   { src: "/images/logo1.png", alt: "Logo 1" },
   { src: "/images/logo2.png", alt: "Logo 2" },
@@ -15,6 +18,31 @@ const logos = [
   { src: "/images/logo8.png", alt: "Logo 8" },
   { src: "/images/logo9.png", alt: "Logo 9" },
   { src: "/images/logo10.png", alt: "Logo 10" }
+];
+const logoSecond = [
+  { src: "/images/logo/logo.png", alt: "Logo" },
+  { src: "/images/logo/logo1.png", alt: "Logo 1" },
+  { src: "/images/logo/logo2.png", alt: "Logo 2" },
+  { src: "/images/logo/logo3.png", alt: "Logo 3" },
+  { src: "/images/logo/logo4.png", alt: "Logo 4" },
+  { src: "/images/logo/logo5.png", alt: "Logo 5" },
+  { src: "/images/logo/logo6.png", alt: "Logo 6" },
+  { src: "/images/logo/logo7.png", alt: "Logo 7" },
+  { src: "/images/logo/logo8.png", alt: "Logo 8" },
+  { src: "/images/logo/logo9.png", alt: "Logo 9" },
+  { src: "/images/logo/logo10.png", alt: "Logo 10" },
+  { src: "/images/logo/logo11.png", alt: "Logo 11" },
+  { src: "/images/logo/logo12.png", alt: "Logo 12" },
+  { src: "/images/logo/logo13.png", alt: "Logo 13" },
+  { src: "/images/logo/logo14.png", alt: "Logo 14" },
+  { src: "/images/logo/logo15.png", alt: "Logo 15" },
+  { src: "/images/logo/logo16.png", alt: "Logo 16" },
+  { src: "/images/logo/logo17.png", alt: "Logo 17" },
+  { src: "/images/logo/logo18.png", alt: "Logo 18" },
+  { src: "/images/logo/logo19.png", alt: "Logo 19" },
+  { src: "/images/logo/logo20.png", alt: "Logo 20" },
+  { src: "/images/logo/logo21.png", alt: "Logo 21" },
+  { src: "/images/logo/logo22.png", alt: "Logo 22" }
 ];
 const AboutSection = () => {
   return (
@@ -123,7 +151,7 @@ const AboutSection = () => {
         <div className="lg:lg_absoulte rounded-large-circle bg-custom-circle blur-custom-blur"></div>
       </div>
       {/* Professional Accreditations */}
-      <div className="pt-[200px] bg-custom-gradient">
+      <div className="lg:pt-[200px] max-sm:pt-[8px] bg-custom-gradient">
         <div className="container  mx-auto mt-10 px-4">
           <h1 className="text-[25px] font-bold text-[#fff]">
             الإعتمادات المهنية
@@ -137,25 +165,26 @@ const AboutSection = () => {
             {logos.map((logo, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center transition-transform transform hover:scale-105 "
+                className="relative flex items-center justify-center transition-transform transform hover:scale-105 group"
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="max-w-full max-h-full"
+                  className="max-w-full max-h-full opacity-50 group-hover:opacity-100 transition-opacity duration-300"
                 />
+                <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-custom-logo rounded-full blur-custom-logo opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 transform -translate-x-1/2 -translate-y-1/2"></div>
               </div>
             ))}
           </div>
         </div>
       </div>
       {/* Achievement in numbers */}
-      <div className="absolute lg:left-[-326px] z-0">
+      <div className="absolute lg:left-[-326px] sm:left-[0] z-0">
         <div className="lg:lg_absoulte rounded-large-circle bg-custom-circle blur-custom-blur"></div>
       </div>
-      <div className="pt-[200px] bg-custom-gradient">
+      <div className="lg:pt-[200px] max-sm:pt-[8px] bg-custom-gradient">
         <div className="container mx-auto mt-10 px-4">
-          <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2">
             <h1 className="text-[48px] font-bold tracking-[0.96px] text-[#FFF]">
               إنــجاز فــي أرقــام
             </h1>
@@ -166,7 +195,7 @@ const AboutSection = () => {
               نلتزم بالتميز{" "}
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-8 bg-[url(/images/GroupCount.png)] bg-auto bg-no-repeat rtl:bg-[5%] ltr:bg-right pt-[61px] mt-[61px]">
+          <div className="grid lg:grid-cols-2 gap-8 bg-[url(/images/GroupCount.png)] bg-auto bg-no-repeat rtl:bg-[5%] ltr:bg-right pt-[61px] mt-[61px]">
             <CountComponent />
           </div>
         </div>
@@ -183,11 +212,11 @@ const AboutSection = () => {
 
           <div className="container mx-auto mt-10 px-4">
             {/* Grid Layout for Accordion and Content */}
-            <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid  sm:grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Right Section: Image, Text, and Buttons */}
               <div className="flex flex-col space-y-6">
                 {/* Image */}
-                <div className="h-[337px]">
+                <div className="h-[337px] max-xs:h-[0]">
                   {/* <img src="/images/Vector.png" alt="Main Image" className="object-cover w-full h-full rounded-lg" /> */}
                 </div>
 
@@ -231,23 +260,23 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="absolute lg:left-[-326px] z-0">
+        <div className="absolute lg:left-[-326px] sm:left-[0] z-0">
           <div className="lg:lg_absoulte rounded-large-circle bg-custom-circle blur-custom-blur"></div>
         </div>
       </div>
       {/* Service */}
-      <div className="pt-[200px] bg-custom-gradient">
+      <div className="lg:pt-[200px] max-sm:pt-[8px]  bg-custom-gradient">
         <div className="container  mx-auto mt-10 px-4 relative">
           <div className="">
             <h1 className="text-[32px] font-bold text-[#fff]">خدماتنا </h1>
             <img
               src="/images/Vector@2x.png"
               alt="Background Vector"
-              className="absolute top-[-249px] rtl:top-[-197px] rtl:right-[119px] ltr:right-[-114px] w-full"
+              className="absolute top-[-249px] sm:right-0 lg:right-[119px] rtl:top-[-197px] rtl:max-xs:top-0 rtl:lg:right-[119px] rtl:sm:right-0 ltr:lg:right-[-114px] ltr:sm:right-0 lg:w-full max-xs:relative"
             />
           </div>
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 sm:grid-cols-1 w-[35%] mt-[19px]">
+            <div className="grid sm:grid-cols-1 lg:w-[35%] mt-[19px]">
               <p className="font-normal text-[12px] text-white-40">
                 نقدم أكثر من 16 خدمة متكاملة لتطوير الأفراد والمؤسسات، تشمل
                 التدريب المتخصص، التحليل الدقيق للاحتياجات، والتعلم الإلكتروني،
@@ -329,10 +358,10 @@ const AboutSection = () => {
         </div>
       </div>
       {/* Achievement concept */}
-      <div className="pt-[200px] bg-custom-gradient">
+      <div className="lg:pt-[200px] max-sm:pt-[8px] bg-custom-gradient">
         <div className="container  mx-auto mt-10 px-4 relative">
           <h1 className="text-[25px] font-bold text-[#fff]">مفهوم إنجاز</h1>
-          <p className="font-normal text-[12px] text-white-40 w-[51%] mt-[19px]">
+          <p className="font-normal text-[12px] text-white-40 lg:w-[51%] max-xs:w-[100%] mt-[19px]">
             في مركز إنجاز المتحدة للتدريب، نركز على تقديم حلول تدريبية مبتكرة
             تعزز المهارات الشخصية، وتنمي المواهب من خلال برامج شاملة. نضمن جودة
             التدريب عبر استشارات مهنية واستراتيجية تدعم النمو المؤسسي. نلتزم
@@ -340,7 +369,7 @@ const AboutSection = () => {
             مع احتياجات السوق المتغيرة لتحقيق أفضل النتائج.
           </p>
 
-          <div className="grid grid-cols-5 sm:grid-cols-2 lg:grid-cols-5 mt-[80px]">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 mt-[80px]">
             <div className="">
               <div className="flex items-center">
                 <h2 className="number_font">إ</h2>
@@ -404,24 +433,97 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="absolute lg:left-[-326px] z-0">
-          <div className="lg:lg_absoulte rounded-large-circle bg-custom-circle blur-custom-blur"></div>
-        </div>
-      <div className="pt-[200px] bg-custom-gradient">
+      {/* <div className="absolute lg:left-[-326px] sm:left-[0] z-0">
+        <div className="lg:lg_absoulte rounded-large-circle bg-custom-circle blur-custom-blur"></div>
+      </div> */}
+
+      {/* Testimonials */}
+      <div className="lg:pt-[200px] max-sm:pt-[8px] bg-custom-gradient">
         <div className="container  mx-auto mt-10 px-4 relative">
-          <div className="flex items-baseline">
-            <div className="">
-            <h1 className="text-[25px] font-bold text-[#fff]">قالوا عنا</h1>
-            <h3 className="text-[17px] font-bold text-[#15B86C]">اكتشف تجارب عملائنا المتميزة</h3>
+          <div className="flex items-center max-xs:flex-col">
+            <div className="max-xs:w-full">
+              <h1 className="text-[25px] font-bold text-[#fff]">قالوا عنا</h1>
+              <h3 className="text-[17px] font-bold text-[#15B86C]">
+                اكتشف تجارب عملائنا المتميزة
+              </h3>
             </div>
-              <img src='/images/Rectangle357.svg' />
-            <div className="w-[70%]">
-              <p className='text-[14px] font-normal text-[rgba(255,255,255,0.3)]  w-[4]'>نحن في مركز إنجاز المتحدة للتدريب نفخر بتقديم تجارب تعليمية لا تُنسى. إليك ما قاله بعض عملائنا</p>
+            <img
+              src="/images/Rectangle357.svg"
+              className="mx-14 max-sm:hidden"
+            />
+            <div className="">
+              <p className="text-[14px] font-normal text-[rgba(255,255,255,0.3)]  w-[79%]">
+                نحن في مركز إنجاز المتحدة للتدريب نفخر بتقديم تجارب تعليمية لا
+                تُنسى. إليك ما قاله بعض عملائنا
+              </p>
             </div>
           </div>
         </div>
+        <div className="mt-[94px]">
+          <Testimonials />
+        </div>
+      </div>
+      <div className="absolute lg:left-[-326px] sm:left-[0]  z-0">
+        <div className="lg:lg_absoulte rounded-large-circle bg-custom-circle blur-custom-blur"></div>
+      </div>
+      {/* partner */}
+      <div className="pt-[200px] bg-custom-gradient">
+        <div className="container mx-auto px-4 relative">
+          <div className="w-full lg:w-6/12 pb-12 md:pb-16 mx-auto text-center">
+            <span className="font-['29LT_Bukra'] text-[24px] font-normal leading-[43.68px] text-[#b2babf] tracking-[0.48px] relative text-center inline-block">
+              نحظى بثقة أكثر من
+            </span>
+            <span className="font-['29LT_Bukra'] text-[26px] font-bold leading-[43.68px] text-[#fff] tracking-[0.48px] relative text-center inline-block">
+              3000 شريك
+            </span>
+            <span className="font-['29LT_Bukra'] text-[24px] font-normal leading-[43.68px] text-[#b2babf] tracking-[0.48px] relative text-center">
+              في تقديم حلول متكاملة لتعزيز الكفاءات وتحقيق النجاح المؤسسي
+            </span>
+          </div>
+        </div>
+        <div className="container mx-auto mt-10 px-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 p-8">
+            {logoSecond.map((logo, index) => (
+              <div
+                key={index}
+                className="relative flex items-center justify-center transition-transform transform hover:scale-105 group"
+              >
+                <div className="relative">
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="max-w-full max-h-full opacity-50 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                  <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-custom-logo rounded-full blur-custom-logo opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 transform -translate-x-1/2 -translate-y-1/2"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="lg:pt-[200px] max-sm:pt-[8px] bg-custom-gradient">
+        <div className="container  mx-auto px-4 relative">
+          <div className="w-full lg:w-6/12 mx-auto text-center">
+            <span className="font-['29LT_Bukra'] text-[26px] font-bold leading-[43.68px] text-[#fff] tracking-[0.48px] relative text-center inline-block">
+              أهم المجالات التدريبية المطلوبة
+            </span>
+            <p className="text-[14px] font-normal leading-[25.48px] text-[rgba(255,255,255,0.4)] tracking-[0.28px] relative mx-auto my-0">
+              في مركز إنجاز المتحدة للتدريب، نلتزم بتطوير محتوى تدريبي يعكس
+              احتياجات السوق المتجددة، وذلك من خلال فريق تطوير متخصص يعمل
+              باستمرار على تصميم وتحديث البرامج التدريبية الأكثر طلباً.
+            </p>
+          </div>
+        </div>
+
         <div className="">
-                
+          <Trainingfields />
+        </div>
+      </div>
+
+      <div className="lg:pt-[200px] max-sm:pt-[8px] bg-custom-gradient">
+        <div className="container  mx-auto px-4 relative min-h-96">
+          <Mapping />
         </div>
       </div>
     </div>
