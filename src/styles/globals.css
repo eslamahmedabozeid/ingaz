@@ -118,7 +118,7 @@ body{
         @apply text-[14px] lg:mt-[53px] font-normal text-[rgba(255,255,255,0.3)] max-xs:mt-[0]
     }
     .number_font{
-        @apply text-[#fff] text-[40px] font-semibold rounded-[99px] bg-[rgba(9,55,53,0.2)] w-[64px] h-[66px] flex justify-center
+        @apply text-[#fff] text-[40px] font-semibold rounded-[99px] bg-[rgba(9,55,53,0.2)] w-[64px] rtl:h-[66px] ltr:h-[58px] flex justify-center
     }
     .title_font{
         @apply text-[#fff] text-[14px] font-semibold px-4
@@ -130,6 +130,9 @@ body{
       .number{
         @apply font-bold text-[#fff] lg:text-[48px] max-xs:text-[20px]
       }
+      .footer_input{
+        @apply bg-transparent border border-[rgba(255,255,255,0.4)] text-sm rtl:rounded-r-lg ltr:rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 py-[12px] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-[#fff]
+      }
 }
 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
     content: '' !important;
@@ -138,9 +141,17 @@ body{
     bottom: 0 !important;
     top: auto !important;
 }
-
+.marge{
+    margin: 0 !important;
+}
 .swiper-button-prev, .swiper-rtl .swiper-button-next,.swiper-button-next, .swiper-rtl .swiper-button-prev{
     position: static !important;
+}
+.social ul li{
+    margin: 0 24px;
+}
+.link ul li:nth-last-child(1){
+    margin: 0 54px;
 }
 @layer utilities {
     .trns {

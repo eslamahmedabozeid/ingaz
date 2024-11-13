@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { Inter, IBM_Plex_Sans_Arabic } from "next/font/google";
 import GlobalProvider from "../../Providers";
 import "../../styles/globals.css";
+import Footer from '../../components/Footer';
+import LanguageChanger from '../../components/LanguageChanger'
 
 const inter = Inter({
   weight: ["300", "500", "700"],
@@ -28,7 +30,7 @@ export function generateStaticParams() {
 }
 
 function getFont(locale: string) {
-  return locale.startsWith("ar") ? ibmPlexSansArabic : inter;
+  return locale.startsWith("en") ? ibmPlexSansArabic : inter;
 }
 export default async function RootLayout({
   children,
@@ -42,7 +44,9 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir(locale)}>
       <body className={font.className}>
+        <LanguageChanger />
         <GlobalProvider locale={locale}>{children}</GlobalProvider>{" "}
+        <Footer />
       </body>
     </html>
   );

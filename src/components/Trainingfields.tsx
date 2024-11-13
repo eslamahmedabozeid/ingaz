@@ -3,21 +3,21 @@
 "use client";
 
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
-// البيانات مع هيكلية جديدة
 const categories = [
   {
     name: "الابتكار وريادة الأعمال",
-    filters: ["التخطيط الاستراتيجي", "التوجيه والإرشاد القيادي"]
+    filters: ["التخطيط الاستراتيجي", "التوجيه والإرشاد القيادي"],
   },
   {
     name: "القيادة والتطوير المهني",
-    filters: ["تطوير المهارات القيادية", "إدارة الأزمات وصنع القرار"]
+    filters: ["تطوير المهارات القيادية", "إدارة الأزمات وصنع القرار"],
   },
   {
     name: "التكنولوجيا والابتكار المالي",
-    filters: ["الذكاء الاصطناعي", "تحليل البيانات"]
-  }
+    filters: ["الذكاء الاصطناعي", "تحليل البيانات"],
+  },
 ];
 
 const data = Array.from({ length: 1000 }, (_, index) => ({
@@ -29,10 +29,11 @@ const data = Array.from({ length: 1000 }, (_, index) => ({
       ? "الابتكار وريادة الأعمال"
       : index % 3 === 1
       ? "القيادة والتطوير المهني"
-      : "التكنولوجيا والابتكار المالي"
+      : "التكنولوجيا والابتكار المالي",
 }));
 
 const Trainingfields = () => {
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState<string>(
     categories[0].name
   );
@@ -51,7 +52,6 @@ const Trainingfields = () => {
     setCurrentPage(1);
   };
 
-  // تصفية البيانات بناءً على الفئة والفلتر
   const filteredData = data.filter((item) => {
     return (
       (!selectedCategory || item.category === selectedCategory) &&
@@ -59,16 +59,13 @@ const Trainingfields = () => {
     );
   });
 
-  // بيانات الصفحة الحالية
   const paginatedData = filteredData.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
 
-  // حساب عدد الصفحات
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 
-  // دالة لتوليد أرقام الصفحات مع الشروط المطلوبة
   const getPageNumbers = () => {
     const pages = [];
     const maxPages = 9;
@@ -110,13 +107,12 @@ const Trainingfields = () => {
                   : "bg-transparent text-[#667680]"
               }`}
             >
-              {category.name}
+              {t(category.name)}
             </button>
           ))}
         </div>
       </div>
 
-      {/* الفلاتر السفلية بناءً على الفئة المختارة */}
       {selectedCategory && (
         <div
           className="container mx-auto mt-4 flex flex-wrap gap-4 border-solid p-0"
@@ -134,38 +130,35 @@ const Trainingfields = () => {
                     : ""
                 }`}
               >
-                {filter}
+                {t(filter)}
               </button>
             ))}
         </div>
       )}
 
-      {/* البطاقات */}
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-4">
         {paginatedData.map((item, index) => (
           <div key={index} className="bg-[#093735] p-6 rounded-lg shadow-md">
             <img src="/images/Layer_2.png" />
-            <h3 className="text-lg font-bold mb-2 mt-16">{item.title}</h3>
+            <h3 className="text-lg font-bold mb-2 mt-16">{t(item.title)}</h3>
             <p className="text-[16px] font-normal leading-[29.12px] text-[#b2babf] relative mx-auto my-0">
-              {item.description}
+              {t(item.description)}
             </p>
           </div>
         ))}
         {paginatedData.length === 0 && (
           <div className="text-center col-span-full text-white">
-            لا توجد نتائج
+            {t("لا توجد نتائج")}
           </div>
         )}
       </div>
 
-     
       <div className="container w-full flex text-center pt-16">
         <span className=" bg-[#15b86c] rounded-[45px]  mx-auto my-0 flex justify-center items-start shrink-0 basis-auto font-['29LT_Bukra'] text-[12px] font-normal leading-[21.84px] text-[#303239] relative text-center whitespace-nowrap px-16 py-2">
-          سجل هنا
+          {t("سجل هنا")}
         </span>
       </div>
 
-      {/* Pagination */}
       <div className="container-fluid mx-auto flex max-sm:flex-col justify-between mt-8 items-center gap-2 ">
         <button
           onClick={() =>
@@ -174,8 +167,8 @@ const Trainingfields = () => {
           disabled={currentPage === totalPages}
           className="px-4 py-2 bg-[#093735] text-white rounded-full flex items-center hover:bg-gray-600"
         >
-          <img src="/images/fi-ss-arrow-small-right.svg" />
-          التالي
+          <img src="/images/fi-ss-arrow-small-right.svg" className="ltr:rotate-180"/>
+          {t("التالي")}
         </button>
         <div className="flex">
           {getPageNumbers().map((page, index) => (
@@ -198,8 +191,8 @@ const Trainingfields = () => {
           disabled={currentPage === 1}
           className="px-4 py-2 bg-[#093735] text-white rounded-full flex items-center hover:bg-gray-600"
         >
-          السابق
-          <img src="/images/fi-ss-arrow-small-left.svg" />
+          {t("السابق")}
+          <img src="/images/fi-ss-arrow-small-left.svg" className="ltr:rotate-180"/>
         </button>
       </div>
     </div>

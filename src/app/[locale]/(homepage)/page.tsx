@@ -10,7 +10,7 @@ function page({ params: { locale } }: { params: { locale: string } }) {
   return (
     <div className="flex flex-col">
       <div className="flex justify-between absolute z-20">
-        <LanguageChanger />
+        {/* <LanguageChanger /> */}
         {/* <ThemeChanger /> */}
       </div>
       <ServerComponent locale={locale} />

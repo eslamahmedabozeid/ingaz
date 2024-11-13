@@ -5,13 +5,12 @@ import AboutSection from "./AboutSection";
 async function ServerComponent({ locale }: { locale: string }) {
   const session = await auth();
   const { t } = await initTranslations(locale, ["homepage"]);
-  console.log("session", session);
 
   return (
     <div>
       {" "}
       <FristSection t={t}/>
-      <AboutSection />
+      <AboutSection t={t}/>
     </div>
   );
 }
